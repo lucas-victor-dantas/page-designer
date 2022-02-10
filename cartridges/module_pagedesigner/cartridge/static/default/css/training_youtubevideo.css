@@ -1,0 +1,15 @@
+.wrapper-image-youtube {
+    position: relative;
+}
+
+#wrapper_exercise {
+    position: relative;
+}
+
+#Iframe_exercise {
+    width: 1110px;
+    height: 1036px;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
