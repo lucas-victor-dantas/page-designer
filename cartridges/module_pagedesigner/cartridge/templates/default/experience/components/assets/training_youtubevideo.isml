@@ -2,14 +2,19 @@
     var assets = require('*/cartridge/scripts/assets.js');
     assets.addCss('/css/training_youtubevideo.css');
     assets.addCss('/css/component.css');
-    assets.addJs('/js/Iframe.js')
+    assets.addJs('/js/jquery-3.3.1.min.js')
+    assets.addJs('/js/iFrame.js')
+    assets.Js('js/bootstrap.min')
 </isscript>
 
 
 <div id='wrapper_exercise'>
-    <img class='component-image'src="${pdict.image.src.mobile}" style="--focal-point-x:${pdict.image.focalPointX}; --focal-point-y:${pdict.image.focalPointY}" <isif condition="${pdict.image.alt}">alt="${pdict.image.alt}" title="${pdict.image.alt}"</isif> />
-    
-    <iframe  id='Iframe_exercise' src="${pdict.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-    clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div> 
+    <div id='player'>
+    </div>
+    <img class='youtube-background' src="${pdict.image.src.mobile}"
+        style="--focal-point-x:${pdict.image.focalPointX}; --focal-point-y:${pdict.image.focalPointY}" <isif
+        condition="${pdict.image.alt}">alt="${pdict.image.alt}" title="${pdict.image.alt}"</isif> />
 
+    <button class='play-video' data-video-id="${pdict.id}">Play video</button>
+
+</div>
